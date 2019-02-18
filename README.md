@@ -17,15 +17,15 @@ return values for methods, and dispatch exceptions
 _current class_ 
 * frames are allocated from the Java Virtual Machine stack of the thread creating the frame
 * each frame has its own array of local variables, its own operand stack, and a reference 
-to the run-time constant pool of the class of the current method.
+to the run-time constant pool of the class of the current method
 * the sizes of the local variable array and the operand stack are determined at compile-time and are 
 supplied along with the code for the method associated with the frame
 * frame ceases to be current if its method invokes another method or if its method completes
-* flow: 
+* lifecycle: 
     * when a method is invoked, a new frame is created and becomes current when control transfers to the new method
     * on method return, the current frame passes back the result of its method invocation, if any, to the previous frame
-    * the current frame is then discarded as the previous frame becomes the current one.
-    * frame created by a thread is local to that thread and cannot be referenced by any other thread
+    * the current frame is then discarded as the previous frame becomes the current one
+* frame created by a thread is local to that thread and cannot be referenced by any other thread
     
 ## local variables
 _Reference_: https://docs.oracle.com/javase/specs/jvms/se11/html/jvms-2.html#jvms-2.6.1
