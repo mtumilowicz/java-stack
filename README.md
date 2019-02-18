@@ -2,6 +2,21 @@
 
 _Reference_: https://www.amazon.com/Java-Language-Features-Modules-Expressions/dp/1484233476
 
+# stack
+_Reference_: https://docs.oracle.com/javase/specs/jvms/se11/html/jvms-2.html#jvms-2.5.2
+
+* each thread in a JVM has its own JVM stack
+* created when thread is created
+* LIFO
+* stores frames
+* holds local variables and partial results, and plays a part in method invocation and return
+* stack is never manipulated directly except to push and pop frames, so frames may be heap allocated
+* if the computation in a thread requires a larger Java Virtual Machine stack than is permitted, 
+the Java Virtual Machine throws a `StackOverflowError`
+* specification permits Java Virtual Machine stacks either to be of a fixed size or to dynamically expand
+* if the Java Virtual Machine stacks are of a fixed size, the size of each Java Virtual Machine stack may 
+be chosen independently when that stack is created
+
 # frame
 _Reference_: https://docs.oracle.com/javase/specs/jvms/se11/html/jvms-2.html#jvms-2.6
 
@@ -88,21 +103,6 @@ field references that must be resolved at run-time
 * each run-time constant pool is allocated from the Java Virtual Machine's method area
 * the run-time constant pool for a class or interface is constructed when the class or interface is created
 by the Java Virtual Machine
-
-# stack
-_Reference_: https://docs.oracle.com/javase/specs/jvms/se11/html/jvms-2.html#jvms-2.5.2
-
-* each thread in a JVM has its own JVM stack
-* created when thread is created
-* LIFO
-* stores frames
-* holds local variables and partial results, and plays a part in method invocation and return
-* stack is never manipulated directly except to push and pop frames, so frames may be heap allocated
-* if the computation in a thread requires a larger Java Virtual Machine stack than is permitted, 
-the Java Virtual Machine throws a `StackOverflowError`
-* specification permits Java Virtual Machine stacks either to be of a fixed size or to dynamically expand
-* if the Java Virtual Machine stacks are of a fixed size, the size of each Java Virtual Machine stack may 
-be chosen independently when that stack is created
 
 # projects
 * https://github.com/mtumilowicz/java8-stack-stackwalking
