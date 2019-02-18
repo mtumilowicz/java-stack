@@ -41,6 +41,7 @@ supplied along with the code for the method associated with the frame
     * on method return, the current frame passes back the result of its method invocation, if any, to the previous frame
     * the current frame is then discarded as the previous frame becomes the current one
 * frame created by a thread is local to that thread and cannot be referenced by any other thread
+* JVM allows to hide some frames for performance reasons
     
 ## local variables
 _Reference_: https://docs.oracle.com/javase/specs/jvms/se11/html/jvms-2.html#jvms-2.6.1
