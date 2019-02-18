@@ -66,7 +66,7 @@ _Reference_: https://docs.oracle.com/javase/specs/jvms/se11/html/jvms-2.html#jvm
     iload_1     # Push the value from local variable 1 onto the stack
     iadd        # Pops those off the stack, adds them, and pushes the result
     ```
-    the iadd instruction adds two int values together - it requires that the `int` values to be 
+    the `iadd` instruction adds two int values together - it requires that the `int` values to be 
     added be the top two values of the operand stack, pushed there by previous instructions. 
     1. both of the `int` values are popped from the operand stack. 
     1. they are added
