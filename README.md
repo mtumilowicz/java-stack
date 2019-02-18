@@ -39,29 +39,32 @@ representation of a class or interface along with the code for the method associ
 * on class method invocation, any parameters are passed in consecutive local variables starting from local variable `0`
 * on instance method invocation, local variable `0` is always used to pass a reference to the object on which the 
 instance method is being invoked and other parameters are subsequently passed  in consecutive local variables 
-starting from local variable `1`.
+starting from local variable `1`
 
 ## operand stack
 _Reference_: https://docs.oracle.com/javase/specs/jvms/se11/html/jvms-2.html#jvms-2.6.2
 
 * each frame contains a LIFO stack known as its operand stack
-* maximum depth of the operand stack of a frame is determined at compile-time and is supplied along 
-with the code for the method associated with the frame
-* operand stack is empty when the frame that contains it is created
-* Java Virtual Machine supplies instructions to load constants or values from local variables or 
-fields onto the operand stack
-* Other Java Virtual Machine instructions take operands from the operand stack, operate on them, and push the 
-result back onto the operand stack
-* The operand stack is also used to prepare parameters to be passed to methods and to receive method results
-* For example, the iadd instruction (§iadd) adds two int values together. It requires that the int values to be 
-added be the top two values of the operand stack, pushed there by previous instructions. Both of the int values 
-are popped from the operand stack. They are added, and their sum is pushed back onto the operand stack.
+* example
     ```
     iload_0     # Push the value from local variable 0 onto the stack
     iload_1     # Push the value from local variable 1 onto the stack
     iadd        # Pops those off the stack, adds them, and pushes the result
     ```
-* an operand stack has an associated depth, where a value of type long or double contributes two units to the depth 
+    the iadd instruction adds two int values together - it requires that the `int` values to be 
+    added be the top two values of the operand stack, pushed there by previous instructions. 
+    1. both of the `int` values are popped from the operand stack. 
+    1. they are added
+    1. their sum is pushed back onto the operand stack
+* maximum depth of the operand stack of a frame is determined at compile-time and is supplied along 
+with the code for the method associated with the frame
+* operand stack is empty when the frame that contains it is created
+* Java Virtual Machine supplies instructions to load constants or values from local variables or 
+fields onto the operand stack
+* other Java Virtual Machine instructions take operands from the operand stack, operate on them, and push the 
+result back onto the operand stack
+* the operand stack is also used to prepare parameters to be passed to methods and to receive method results
+* an operand stack has an associated depth, where a value of type `long` or `double` contributes two units to the depth 
 and a value of any other type contributes one unit
 
 ## run-time constant pool
