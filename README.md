@@ -30,6 +30,16 @@ supplied along with the code for the method associated with the frame
 ## local variables
 _Reference_: https://docs.oracle.com/javase/specs/jvms/se11/html/jvms-2.html#jvms-2.6.1
 
+* Each frame (§2.6) contains an array of variables known as its local variables. The length of the local 
+variable array of a frame is determined at compile-time and supplied in the binary representation of a 
+class or interface along with the code for the method associated with the frame (§4.7.3).
+* single local variable can hold a value of type boolean, byte, char, short, int, float, reference, or returnAddress
+* value of type long or type double occupies two consecutive local variables
+* On class method invocation, any parameters are passed in consecutive local variables starting from local variable 0
+* On instance method invocation, local variable 0 is always used to pass a reference to the object on which the 
+instance method is being invoked (this in the Java programming language). Any parameters are subsequently passed 
+in consecutive local variables starting from local variable 1.
+
 ## operand stack
 _Reference_: https://docs.oracle.com/javase/specs/jvms/se11/html/jvms-2.html#jvms-2.6.2
 
