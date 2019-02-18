@@ -97,7 +97,7 @@ table in a class file
     3:   ldc     #3; //String Hello, world!                                                  
     5:   invokevirtual   #4; //Method java/io/PrintStream.println:(Ljava/lang/String;)V
     ```
-    `#2`, `#3`, `#4` - references to the constant pool
+    `#2`, `#3`, `#4` - references to the constant pool (reference to field, reference to String, reference to method)
 * contains several kinds of constants, ranging from numeric literals known at compile-time to method and 
 field references that must be resolved at run-time
 * each run-time constant pool is allocated from the Java Virtual Machine's method area
