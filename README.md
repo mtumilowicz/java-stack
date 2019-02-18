@@ -96,10 +96,13 @@ _Reference_: https://docs.oracle.com/javase/specs/jvms/se11/html/jvms-2.html#jvm
 * created when thread is created
 * LIFO
 * stores frames
-* when new method is invoked new frame is pushed to the top of the stack
-* when the method invocation completes the stack is popped out from the stack
-* stack contains: 
-* may differ on different implementations of JVM (could contain more info)
+* holds local variables and partial results, and plays a part in method invocation and return
+* stack is never manipulated directly except to push and pop frames, so frames may be heap allocated
+* if the computation in a thread requires a larger Java Virtual Machine stack than is permitted, 
+the Java Virtual Machine throws a `StackOverflowError`
+* specification permits Java Virtual Machine stacks either to be of a fixed size or to dynamically expand
+* if the Java Virtual Machine stacks are of a fixed size, the size of each Java Virtual Machine stack may 
+be chosen independently when that stack is created.
 
 # projects
 * https://github.com/mtumilowicz/java8-stack-stackwalking
