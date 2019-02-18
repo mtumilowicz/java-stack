@@ -33,8 +33,31 @@ _Reference_: https://docs.oracle.com/javase/specs/jvms/se11/html/jvms-2.html#jvm
 ## operand stack
 _Reference_: https://docs.oracle.com/javase/specs/jvms/se11/html/jvms-2.html#jvms-2.6.2
 
+* each frame contains a LIFO stack known as its operand stack
+* maximum depth of the operand stack of a frame is determined at compile-time and is supplied along 
+with the code for the method associated with the frame
+* operand stack is empty when the frame that contains it is created
+* Java Virtual Machine supplies instructions to load constants or values from local variables or 
+fields onto the operand stack
+* Other Java Virtual Machine instructions take operands from the operand stack, operate on them, and push the 
+result back onto the operand stack
+* The operand stack is also used to prepare parameters to be passed to methods and to receive method results
+* For example, the iadd instruction (§iadd) adds two int values together. It requires that the int values to be 
+added be the top two values of the operand stack, pushed there by previous instructions. Both of the int values 
+are popped from the operand stack. They are added, and their sum is pushed back onto the operand stack.
+* an operand stack has an associated depth, where a value of type long or double contributes two units to the depth 
+and a value of any other type contributes one unit
+
 ## run-time constant pool
 _Reference_: https://docs.oracle.com/javase/specs/jvms/se11/html/jvms-2.html#jvms-2.5.5
+
+* run-time constant pool is a per-class or per-interface run-time representation of the constant_pool 
+table in a class file
+* contains several kinds of constants, ranging from numeric literals known at compile-time to method and 
+field references that must be resolved at run-time
+* each run-time constant pool is allocated from the Java Virtual Machine's method area
+* the run-time constant pool for a class or interface is constructed when the class or interface is created
+by the Java Virtual Machine
 
 # stack
 _Reference_: https://docs.oracle.com/javase/specs/jvms/se11/html/jvms-2.html#jvms-2.5.2
