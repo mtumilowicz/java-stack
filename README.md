@@ -71,7 +71,18 @@ and a value of any other type contributes one unit
 _Reference_: https://docs.oracle.com/javase/specs/jvms/se11/html/jvms-2.html#jvms-2.5.5
 
 * run-time constant pool is a per-class or per-interface run-time representation of the constant_pool 
-table in a class file
+table in a class file (all its symbolic references)
+* example
+    ```
+    System.out.println("Hello, world!");
+    ```
+    produces bytecode
+    ```
+    0:   getstatic       #2; //Field java/lang/System.out:Ljava/io/PrintStream;              
+    3:   ldc     #3; //String Hello, world!                                                  
+    5:   invokevirtual   #4; //Method java/io/PrintStream.println:(Ljava/lang/String;)V
+    ```
+    `#2`, `#3`, `#4` - references to the constant pool
 * contains several kinds of constants, ranging from numeric literals known at compile-time to method and 
 field references that must be resolved at run-time
 * each run-time constant pool is allocated from the Java Virtual Machine's method area
