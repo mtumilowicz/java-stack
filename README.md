@@ -102,7 +102,7 @@ _Reference_: https://docs.oracle.com/javase/specs/jvms/se11/html/jvms-2.html#jvm
 the Java Virtual Machine throws a `StackOverflowError`
 * specification permits Java Virtual Machine stacks either to be of a fixed size or to dynamically expand
 * if the Java Virtual Machine stacks are of a fixed size, the size of each Java Virtual Machine stack may 
-be chosen independently when that stack is created.
+be chosen independently when that stack is created
 
 # projects
 * https://github.com/mtumilowicz/java8-stack-stackwalking
