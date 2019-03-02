@@ -16,8 +16,9 @@ the Java Virtual Machine throws a `StackOverflowError`
 * specification permits Java Virtual Machine stacks either to be of a fixed size or to dynamically expand
 * if the Java Virtual Machine stacks are of a fixed size, the size of each Java Virtual Machine stack may 
 be chosen independently when that stack is created
-* set stack size: **-Xss** or **-XX:ThreadStackSize** (internal flag of HotSpot, specific to HotSpot)
-* default stack size (HotSpot): 320k in the 32-bit VM, 1024k in the 64-bit VM
+* default stack size (HotSpot): 320k in the 32-bit VM, 1024k in the 64-bit VM (https://www.oracle.com/technetwork/java/hotspotfaq-138619.html#threads_oom)
+* set stack size: **-Xss**
+
 # frame
 _Reference_: https://docs.oracle.com/javase/specs/jvms/se11/html/jvms-2.html#jvms-2.6
 
