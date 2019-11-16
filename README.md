@@ -1,6 +1,7 @@
 # java-stack
 
-_Reference_: https://www.amazon.com/Java-Language-Features-Modules-Expressions/dp/1484233476
+_Reference_: https://www.amazon.com/Java-Language-Features-Modules-Expressions/dp/1484233476  
+_Reference_: https://www.youtube.com/watch?v=M8LiOANu3Nk  
 
 # stack
 _Reference_: https://docs.oracle.com/javase/specs/jvms/se11/html/jvms-2.html#jvms-2.5.2
@@ -35,6 +36,7 @@ _current class_
 * frames are allocated from the Java Virtual Machine stack of the thread creating the frame
 * each frame has its own array of local variables, its own operand stack, and a reference 
 to the run-time constant pool of the class of the current method
+    ![alt text](img/java-stack-frame.png)
 * the sizes of the local variable array and the operand stack are determined at compile-time and are 
 supplied along with the code for the method associated with the frame
 * frame ceases to be current if its method invokes another method or if its method completes
