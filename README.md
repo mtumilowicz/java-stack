@@ -39,6 +39,7 @@ _current class_
 to the run-time constant pool of the class of the current method
 
     ![alt text](img/java-stack-frame.png)
+    ![alt text](img/frame.png)
 * the sizes of the local variable array and the operand stack are determined at compile-time and are 
 supplied along with the code for the method associated with the frame
 * frame ceases to be current if its method invokes another method or if its method completes
