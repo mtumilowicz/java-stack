@@ -1,6 +1,7 @@
 # java-stack
 
 _Reference_: https://www.amazon.com/Java-Language-Features-Modules-Expressions/dp/1484233476  
+_Reference_: [How the JVM compiles bytecode into machine code](https://www.youtube.com/watch?v=M8LiOANu3Nk)  
 _Reference_: [2019 - Krzysztof Chruściel - Kilka wskazówek jak projektować użyteczne interfejsy](https://www.youtube.com/watch?v=-_dhEkdlsew)  
 
 # stack
@@ -36,6 +37,7 @@ _current class_
 * frames are allocated from the Java Virtual Machine stack of the thread creating the frame
 * each frame has its own array of local variables, its own operand stack, and a reference 
 to the run-time constant pool of the class of the current method
+
     ![alt text](img/java-stack-frame.png)
 * the sizes of the local variable array and the operand stack are determined at compile-time and are 
 supplied along with the code for the method associated with the frame
