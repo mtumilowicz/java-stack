@@ -1,7 +1,7 @@
 # java-stack
 
 _Reference_: https://www.amazon.com/Java-Language-Features-Modules-Expressions/dp/1484233476  
-_Reference_: https://www.youtube.com/watch?v=M8LiOANu3Nk  
+_Reference_: [2019 - Krzysztof Chruściel - Kilka wskazówek jak projektować użyteczne interfejsy](https://www.youtube.com/watch?v=-_dhEkdlsew)  
 
 # stack
 _Reference_: https://docs.oracle.com/javase/specs/jvms/se11/html/jvms-2.html#jvms-2.5.2
