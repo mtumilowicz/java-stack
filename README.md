@@ -2,7 +2,6 @@
 
 _Reference_: https://www.amazon.com/Java-Language-Features-Modules-Expressions/dp/1484233476  
 _Reference_: [How the JVM compiles bytecode into machine code](https://www.youtube.com/watch?v=M8LiOANu3Nk)  
-_Reference_: [2019 - Krzysztof Chruściel - Kilka wskazówek jak projektować użyteczne interfejsy](https://www.youtube.com/watch?v=-_dhEkdlsew)  
 
 # stack
 _Reference_: https://docs.oracle.com/javase/specs/jvms/se11/html/jvms-2.html#jvms-2.5.2
@@ -22,8 +21,12 @@ be chosen independently when that stack is created
 * set stack size: **-Xss**
 
 # frame
-_Reference_: https://docs.oracle.com/javase/specs/jvms/se11/html/jvms-2.html#jvms-2.6
-
+* _Reference_: https://docs.oracle.com/javase/specs/jvms/se11/html/jvms-2.html#jvms-2.6  
+* _Reference_: [2019 - Krzysztof Chruściel - Kilka wskazówek jak projektować użyteczne interfejsy](https://www.youtube.com/watch?v=-_dhEkdlsew)  
+    * since 30:06
+* frame size: 4 bytes
+    * as a consequence: operation of adding two ints (2 x 4 bytes) pops 2 frames
+    * and operation of adding two long (2 x 8 bytes) pops 4 frames
 * is used to store data and partial results, as well as to perform dynamic linking, 
 return values for methods, and dispatch exceptions
 * new frame is created each time a method is invoked
