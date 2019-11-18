@@ -25,10 +25,10 @@ be chosen independently when that stack is created
 * _Reference_: [2019 - Krzysztof Chruściel - Kilka wskazówek jak projektować użyteczne interfejsy](https://www.youtube.com/watch?v=-_dhEkdlsew)  
     * since 30:06
 * frame size: 4 bytes
-    * as a consequence: operation of adding two ints (2 x 4 bytes) pops 2 frames
-    * and operation of adding two long (2 x 8 bytes) pops 4 frames
-    * another consequence: boolean (when local variable) takes whole frame - same as int
-        * boolean as a class fields - optimisation, boolean as a local variable - no optimisation
+    * as a consequence: operation of adding two `ints` (2 x 4 bytes) pops 2 frames
+    * and operation of adding two `long` (2 x 8 bytes) pops 4 frames
+    * another consequence: `boolean` (when local variable) takes whole frame - same as `int`
+        * `boolean` as a class fields - optimisation, `boolean` as a local variable - no optimisation
 * is used to store data and partial results, as well as to perform dynamic linking, 
 return values for methods, and dispatch exceptions
 * new frame is created each time a method is invoked
