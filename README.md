@@ -1,11 +1,12 @@
 # java-stack
-
-_Reference_: https://www.amazon.com/Java-Language-Features-Modules-Expressions/dp/1484233476  
-_Reference_: [How the JVM compiles bytecode into machine code](https://www.youtube.com/watch?v=M8LiOANu3Nk)  
+* references
+   * https://www.amazon.com/Java-Language-Features-Modules-Expressions/dp/1484233476  
+   * [How the JVM compiles bytecode into machine code](https://www.youtube.com/watch?v=M8LiOANu3Nk)  
 
 # stack
-_Reference_: https://docs.oracle.com/javase/specs/jvms/se11/html/jvms-2.html#jvms-2.5.2
-_Reference_: https://stackoverflow.com/questions/26741925/is-frame-in-jvm-heap-allocated-or-stack-allocated
+* references
+   * https://docs.oracle.com/javase/specs/jvms/se11/html/jvms-2.html#jvms-2.5.2
+   * https://stackoverflow.com/questions/26741925/is-frame-in-jvm-heap-allocated-or-stack-allocated
 
 * each thread in a JVM has its own JVM stack
 * created when thread is created
@@ -22,8 +23,9 @@ Machine throws a `StackOverflowError`
 * set stack size: **-Xss**
 
 # frame
-* _Reference_: https://docs.oracle.com/javase/specs/jvms/se11/html/jvms-2.html#jvms-2.6  
-* _Reference_: [2019 - Krzysztof Chruściel - Kilka wskazówek jak projektować użyteczne interfejsy](https://www.youtube.com/watch?v=-_dhEkdlsew)  
+* references
+   * https://docs.oracle.com/javase/specs/jvms/se11/html/jvms-2.html#jvms-2.6  
+   * [2019 - Krzysztof Chruściel - Kilka wskazówek jak projektować użyteczne interfejsy](https://www.youtube.com/watch?v=-_dhEkdlsew)  
 
 * frame size: 4 bytes
     * as a consequence: operation of adding two `ints` (2 x 4 bytes) pops 2 frames
@@ -58,7 +60,8 @@ to the run-time constant pool of the class of the current method
 * JVM allows to hide some frames for performance reasons
     
 ## local variables
-* _Reference_: https://docs.oracle.com/javase/specs/jvms/se11/html/jvms-2.html#jvms-2.6.1
+* references
+   * https://docs.oracle.com/javase/specs/jvms/se11/html/jvms-2.html#jvms-2.6.1
 
 * each frame contains an array of variables known as its local variables
 * length of the local variable array of a frame is determined at compile-time and supplied in the binary 
@@ -72,7 +75,8 @@ instance method is being invoked and other parameters are subsequently passed in
 starting from local variable `1`
 
 ## operand stack
-* _Reference_: https://docs.oracle.com/javase/specs/jvms/se11/html/jvms-2.html#jvms-2.6.2
+* references
+   * https://docs.oracle.com/javase/specs/jvms/se11/html/jvms-2.html#jvms-2.6.2
 
 * each frame contains a LIFO stack known as its operand stack
 * example
@@ -97,8 +101,9 @@ with the code for the method associated with the frame
 and a value of any other type contributes one unit
 
 ## run-time constant pool
-* _Reference_: https://docs.oracle.com/javase/specs/jvms/se11/html/jvms-2.html#jvms-2.5.5
-* _Reference_: https://stackoverflow.com/questions/10209952/what-is-the-purpose-of-the-java-constant-pool
+* references
+   * https://docs.oracle.com/javase/specs/jvms/se11/html/jvms-2.html#jvms-2.5.5
+   * https://stackoverflow.com/questions/10209952/what-is-the-purpose-of-the-java-constant-pool
 
 ![alt text](img/frame_construction.png)
 * example
